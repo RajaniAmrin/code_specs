@@ -1,0 +1,35 @@
+﻿There are 2 API end point : Provide and Service :
+
+Provider : 
+    Create a provider by providing the following information (POST) to the url http://localhost:8000/api_calls/provider/ :
+    {"name":"","Email":"","phone_number":"","Language":"","Currency":""}
+    
+    Fetch all provider information by providing either of the params (GET) :
+    Eg with id : api_calls/provider/ 
+    With name : http://localhost:8000/api_calls/provider/?name=Amrin
+    
+    DELETE:
+    http://localhost:8000/api_calls/provider/?name=ABC1 
+    
+    PUT:
+    http://localhost:8000/api_calls/provider
+    {"filter":{"<param>":"<value>"},"new_value":{"<param>":"<new value>"}}
+    
+Service provider :
+
+    Create a service area by providing the following information (POST) to the url http://localhost:8000/api_calls/test_view/ :
+    {"user_name":"","sa_name":"","cost":"","lat":"","long":""}
+    
+    Fetch all service area information by providing either of the params (GET) :
+    Eg with id : api_calls/test_view/ 
+    With name : http://localhost:8000/api_calls/test_view/?<param>=<value>
+    
+    DELETE:
+    http://localhost:8000/api_calls/test_view/?<param>=<value> 
+    
+    PUT:
+    http://localhost:8000/api_calls/test_view
+    {"filter":{"<param>":"<value>"},"new_value":{"<param>":"<new value>"}}
+
+
+
