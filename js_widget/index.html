@@ -1,0 +1,29 @@
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<script type="text/javascript" src="widget.js"></script>
+<div id="mywebsite-container">
+</div>
+<style>
+.prod-div{float:left;width:30%}
+.prod-img{width:100px;height:100px;float:left}
+.prod-name{float:left}
+</style>
+<script>
+//dynamically generating catalog page
+function generate_catalog()
+{
+    
+    for(i=1;i<=35;i++)
+          {
+           
+             newdiv = document.createElement('div');
+             divIdName = 'product_'+i;
+             newdiv.setAttribute('id',divIdName);
+             newdiv.setAttribute('class',"prod-div");
+             newdiv.innerHTML ='<img src="prod.jpg" class="prod-img" alt="a"></img><div class="prod-name">Product '+i+'</div><br><div style="float:left">Price :  <span class="price-'+i+'">'+i*15+'</span></div>';
+             document.body.appendChild(newdiv);
+             
+          }
+}
+generate_catalog()
+</script>
+
